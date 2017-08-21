@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+          
+           <!--side menu-->
+           
+            <div id="sidebar">
+                <div id="logo">
+                    <p>W</p>
+                </div>
+                <nav>
+                    <ul id="mainNav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="hamburger" title="Menu">
+                    <span id="topleft"></span>
+                    <span id="topright"></span>
+                    <span id="linemiddle"></span>
+                    <span id="bottomleft"></span>
+                    <span id="bottomright"></span>
+                </div>
+            </div>
+            
+            <!--banner-->
+            
+            <section id="banner">
+                <h1>Office Work</h1>
+                <p>An independent office jobs agency</p>
+            </section>
+            
+            <!--first text section-->
+            
+            <section class="text">
+                <p>
+                    We build strong brands and grow businesses through branded services and digital storytelling.
+                </p>
+                <div class="button">
+                  <div class="buttonHover"></div>
+                    <span>Read more</span>
+                </div>
+            </section>
+            
+            <!--first photo section-->
+            
+            <section class="images">
+                 <div class="imgContainer">
+                    <img src="images/pexels-photo-119550.jpeg" alt="">
+                    <h2>Our awards</h2>
+                </div>
+                <div class="imgContainer">
+                    <img src="images/graydesktop.jpg" alt="">
+                    <h2>Your success</h2>
+                </div>
+                 <div class="imgContainer">
+                    <img src="images/graydesktop.jpg" alt="">
+                    <h2>Our clients</h2>
+                </div>
+                <div class="imgContainer">
+                    <img src="images/pexels-photo-293333.jpeg" alt="">
+                    <h2>We provide</h2>
+                </div>
+            </section>
+            
+            <!--second text section-->
+            
+            <section class="text">
+                <p>
+                    We combine smart design with rich technology to craft innovative brand and business solutions.
+                </p>
+                <div class="button">
+                  <div class="buttonHover"></div>
+                    <span>Read more</span>
+                </div>
+            </section>
+            
+            <!--second photo section-->
+            
+            <section class="images">
+                <div class="imgContainer">
+                    <img src="images/pexels-photo-265152.jpeg" alt="">
+                    <h2>Our goals</h2>
+                </div>
+                <div class="imgContainer">
+                    <img src="images/graydesktop.jpg" alt="">
+                    <h2>Your future</h2>
+                </div>
+            </section>
+            
+            <!--footer-->
+            
+            <footer id="contact">
+                <h2>Say hello</h2>
+                <p class="whitePar">contact@officework.com</p>
+                <p class="whitePar">+20 4444 5555</p>
+                <div>
+                    <div class="footerDiv">
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>LinkedIn</li>
+                        </ul>
+                    </div>
+                    <div class="footerDiv">
+                        OfficeWork &copy; 2017
+                    </div>
+                </div>
+            </footer>
+            
+        </div>  <!--end of wrapper-->
+        
+        <script>
+            function toggleMenu(){
+                
+                var nav = document.querySelector("nav");  
+                var btn = document.getElementById("hamburger");
+                
+                btn.onclick = function(){
+                    
+                    if(btn.className == "") {
+                        btn.className = "active";
+                    }
+                    else {
+                        btn.className = "";
+                    }
+                    
+                    if(nav.className == ""){
+                       nav.className = "visible";   
+                    } 
+                    else {
+                       nav.className = "";   
+                    }
+                  }
+            }
+            toggleMenu(); 
+            
+            function hideMenu(){
+                var btn = document.getElementById("hamburger");
+                var nav = document.querySelector("nav");
+                var links = document.getElementsByTagName("li");
+                
+                for(i=0;i<links.length;i++){
+                    
+                    links[i].onclick = function(){
+                        nav.className = "";
+                        btn.className = "";
+                    }
+                }
+            }
+            hideMenu();
+        </script>
+    </body>
+</html>
